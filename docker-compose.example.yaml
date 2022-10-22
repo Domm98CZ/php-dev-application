@@ -1,0 +1,32 @@
+version: '3.9'
+
+# This is not docker-compose for this git repo project.
+# Insert this docker-compose into your project's root directory and run it.
+
+networks:
+  default:
+    external: true
+    name: php_network
+
+services:
+  proxy:
+    image: jwilder/nginx-proxy:alpine
+    ports:
+      - '0.0.0.0:80:80'
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  app:
+    image: registry.gitlab.com/prochazka-dominik/docker/php-dev-application:<php_version_tag> # Rewrite php version
+    container_name: example_application
+    volumes:
+      - .:/var/www/app # default volume
+#      - ./resources/xdebug/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini # for xdebug uses only
+    environment:
+      - VIRTUAL_HOST=example-application.tld
+    healthcheck:
+      test: ["CMD","curl","-f","http://example-application.tld"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
