@@ -7,3 +7,8 @@ docker push registry.gitlab.com/prochazka-dominik/docker/php-dev-application:8.1
 cd php81
 docker build . -t registry.gitlab.com/prochazka-dominik/docker/php-dev-application:8.1.12 --no-cache
 docker push registry.gitlab.com/prochazka-dominik/docker/php-dev-application:8.1.12
+
+# php-dev-application:8.1.13
+cd php81
+docker build . -t registry.gitlab.com/prochazka-dominik/docker/php-dev-application:8.1.13 --no-cache
+docker push registry.gitlab.com/prochazka-dominik/docker/php-dev-application:8.1.13
