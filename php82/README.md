@@ -1,4 +1,4 @@
-# php-dev-application:8.2.4
+# php-dev-application:8.2.5
 cd php82
-docker build . -t registry.gitlab.com/prochazka-dominik/docker/php-dev-application:8.2.4 --no-cache
-docker push registry.gitlab.com/prochazka-dominik/docker/php-dev-application:8.2.4
+docker build . -t registry.gitlab.com/prochazka-dominik/docker/php-dev-application:8.2.5 --no-cache
+docker push registry.gitlab.com/prochazka-dominik/docker/php-dev-application:8.2.5
