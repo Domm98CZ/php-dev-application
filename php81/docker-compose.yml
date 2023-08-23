@@ -2,6 +2,6 @@ version: "3.9"
 
 services:
   php-dev-application-81:
-    image: registry.gitlab.com/prochazka-dominik/docker/php-dev-application:8.1.19
+    image: registry.gitlab.com/prochazka-dominik/docker/php-dev-application:8.1.22
     build:
       context: .
