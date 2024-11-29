@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  php-dev-application-84:
+    image: registry.gitlab.com/prochazka-dominik/docker/php-dev-application:8.4.1
+    build:
+      context: .
