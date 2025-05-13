@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/prochazka-dominik/docker/php-server:8.4.1
+FROM registry.gitlab.com/prochazka-dominik/docker/php-server:8.4.7
 
 # Config
 ENV PHP_APPLICATION_DIR /var/www/app
