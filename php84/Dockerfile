@@ -8,10 +8,10 @@ COPY ./php.ini ${PHP_INI_DIR}/conf.d/php-dev-application.ini
 RUN chmod 644 ${PHP_INI_DIR}/conf.d/php-dev-application.ini
 
 # PHP Add xDebug
-COPY ./xdebug.ini ${PHP_INI_DIR}/conf.d/docker-php-ext-xdebug.ini
-RUN pecl install xdebug \
-    && docker-php-ext-enable xdebug \
-    && chmod 644 ${PHP_INI_DIR}/conf.d/docker-php-ext-xdebug.ini
+#COPY ./xdebug.ini ${PHP_INI_DIR}/conf.d/docker-php-ext-xdebug.ini
+#RUN pecl install xdebug \
+#    && docker-php-ext-enable xdebug \
+#    && chmod 644 ${PHP_INI_DIR}/conf.d/docker-php-ext-xdebug.ini
 
 # Apache Settings
 COPY ./apache.conf /etc/apache2/sites-available/apache_http.conf
